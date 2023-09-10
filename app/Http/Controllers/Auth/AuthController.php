@@ -32,4 +32,9 @@ class AuthController extends Controller
     {
         return view('auth.new_password');
     }
+
+    public function profile()
+    {
+        return view('auth.profile');
+    }
 }

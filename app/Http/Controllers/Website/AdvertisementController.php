@@ -19,4 +19,16 @@ class AdvertisementController extends Controller
     public function show(){
         return view('website.advertisements.show');
     }
+
+
+    public function selectCategory(){
+
+        return view('website.advertisements.select_category');
+
+    }
+
+    public function addPrivacy ()
+    {
+        return view('website.advertisements.add_privacy');
+    }
 }
