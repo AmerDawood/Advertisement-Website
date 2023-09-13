@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12 mb-5">
-                            <button type="button" class="btn btn-primary">استمرار<i
+                            <button type="button" class="btn btn-primary"><a href="{{ route('select_category') }}" style="color: white">استمرار</a><i
                                     class="fa-solid fa-angles-left"></i></button>
                         </div>
                     </div>

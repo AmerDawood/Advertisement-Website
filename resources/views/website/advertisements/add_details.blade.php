@@ -204,12 +204,17 @@
                                                 <textarea name="" id="" class=" form-control  "
                                                     placeholder="التفاصيل..."></textarea>
                                             </div>
-                                            <div class="form-group">
-                                                <input class="btn  btn-primary fs-16 btn-lg btn-block" type="submit"
-                                                    value="انشاء الإعلان"
-                                                    style="font-size: 16px; padding: 10px; font-weight: 600;">
 
+                                            <div class="form-group">
+                                                <input class="btn btn-primary fs-16 btn-lg btn-block" type="button" value="انشاء الإعلان" onclick="redirectToAnotherPage()" style="font-size: 16px; padding: 10px; font-weight: 600;">
                                             </div>
+
+                                            <script>
+                                                function redirectToAnotherPage() {
+                                                    // Change the URL to the desired destination page
+                                                    window.location.href = '{{ route('home') }}';
+                                                }
+                                            </script>
                                         </form>
                                     </div><!--/card-block-->
                                 </div><!-- /form card login -->

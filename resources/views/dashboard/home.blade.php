@@ -84,79 +84,13 @@
                 <div class="all-div">
 
 
-
-                 <div class="col-lg-7 col-md-6">
-                    <div class="new-sec">
-                        <div class="writsec">
-                            <button class="edit" >اكتب اسم القسم بعد التعديل  ....</button>
-                            <button class="btn btn-success bt-sd"><a href="">اضافة</a></button>
-
-                        </div>
-
-                       <div class="ttilesec">
-                        <h5>الاقسام المتاحة</h5>
-                       </div>
-
-                       <div class="our-sec">
-                        <div class="col-lg-4 col-md-4">
-
-                                <div class="all-buutton2">
-                                   <div>
-                                    <button type="button" class="btn btn-primary btn-lg btn-add">اسم القسم</button>
-                                    <button type="button" class="btn btn-primary btn-lg btn-add">تعديل القسم</button>
-                                    <button type="button" class="btn btn-primary btn-lg bnt-dan">حذف القسم</button>
-                                   </div>
-                                </div>
+                    @if (request()->segment(3) === 'home')
+                    @include('dashboard.body.body1')
+                    @elseif(request()->segment(3) == 'privacy')
+                    @include('dashboard.body.body2')
+                    @endif
 
 
-                                <div class="all-buutton2">
-                                    <div>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">اسم القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">تعديل القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg bnt-dan">حذف القسم</button>
-                                    </div>
-                                 </div>
-
-
-                                <div class="all-buutton2">
-                                    <div>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">اسم القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">تعديل القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg bnt-dan">حذف القسم</button>
-                                    </div>
-                                 </div>
-
-
-                                <div class="all-buutton2">
-                                    <div>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">اسم القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">تعديل القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg bnt-dan">حذف القسم</button>
-                                    </div>
-                                 </div>
-
-
-                                <div class="all-buutton2">
-                                    <div>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">اسم القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">تعديل القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg bnt-dan">حذف القسم</button>
-                                    </div>
-                                 </div>
-
-
-                                <div class="all-buutton2">
-                                    <div>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">اسم القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg btn-add">تعديل القسم</button>
-                                     <button type="button" class="btn btn-primary btn-lg bnt-dan">حذف القسم</button>
-                                    </div>
-                                 </div>
-
-                        </div>
-                       </div>
-                    </div>
-                </div>
 
 
                   <div class="col-lg-5 col-md-6 drop-down">
@@ -173,7 +107,7 @@
 
 
                         <div class="all-buutton">
-                           <a href="">
+                           <a href="{{ route('dashboard',['segment' => 'privacy']) }}">
                             <img src="{{ asset('admin/image/Vector (1).png') }}" alt="">
                            </a>
                            <h4>تعديل قسم</h4>

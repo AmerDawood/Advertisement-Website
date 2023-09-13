@@ -203,8 +203,10 @@
                         </div>
                     </form>
                     <div class="col-lg-3 col-8 my-2 mt-4">
-                        <a href="#" class="btn btn-danger px-4" style="border-radius: 25px;
+
+                        <a href="{{ route('privacy') }}" class="btn btn-danger px-4" style="border-radius: 25px;
                         ">اضف اعلان <span>+</span></a>
+
                     </div>
                 </div>
                 <div class="row">

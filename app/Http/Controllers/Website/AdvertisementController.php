@@ -31,4 +31,9 @@ class AdvertisementController extends Controller
     {
         return view('website.advertisements.add_privacy');
     }
+
+    public function best_advers ()
+    {
+        return view('website.advertisements.best_advers');
+    }
 }

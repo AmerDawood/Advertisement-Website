@@ -204,8 +204,11 @@
                                     <img class="icons-image" src="{{ asset('newWebsite/Images/arrorwright.png') }}" alt="">
                                 </div>
                                 <div class="list">
-                                    <p class="card-text">عرض سيارة للبيع او للتنازل</p>
-                                    <img class="list-image" src="{{ asset('newWebsite/Images/car.png') }}" alt="">
+                                    <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
+                                        <p class="card-text">عرض سيارة للبيع او للتنازل</p>
+                                      </a>
+
+                               <img class="list-image" src="{{ asset('newWebsite/Images/car.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="horizontal">
@@ -215,7 +218,10 @@
                                     <img class="icons-image" src="{{ asset('newWebsite/Images/arrorwright.png') }}" alt="">
                                 </div>
                                 <div class="list">
+                                    <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
+
                                     <p class="card-text">عرض قطع غيار او خدمات سيارات او اكسسورات سيارت للبيع</p>
+                                    </a>
                                     <img class="list-image" src="{{ asset('newWebsite/Images/second-icon.png') }}" alt="">
                                 </div>
                             </div>
@@ -226,7 +232,10 @@
                                     <img class="icons-image" src="{{ asset('newWebsite/Images/arrorwright.png') }}" alt="">
                                 </div>
                                 <div class="list">
+                                    <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
+
                                     <p class="card-text">عرض شاحنة او معدات ثقيلة للبيع والايجار</p>
+                                    </a>
                                     <img class="list-image" src="{{ asset('newWebsite/Images/ep_van.png') }}" alt="">
                                 </div>
                             </div>
@@ -237,7 +246,10 @@
                                     <img class="icons-image" src="{{ asset('newWebsite/Images/arrorwright.png') }}" alt="">
                                 </div>
                                 <div class="list">
+                                    <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
+
                                     <p class="card-text">عرض دباب للبيع</p>
+                                    </a>
                                     <img class="list-image" src="{{ asset('newWebsite/Images/fa-solid_motorcycle.png') }}" alt="">
                                 </div>
                             </div>
@@ -248,7 +260,10 @@
                                     <img class="icons-image" src="{{ asset('newWebsite/Images/arrorwright.png') }}" alt="">
                                 </div>
                                 <div class="list">
+                                    <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
+
                                     <p class="card-text"> عرض عقار للايجار</p>
+                                    </a>
                                     <img class="list-image" src="{{ asset('newWebsite/Images/build.png') }}" alt="">
                                 </div>
                             </div>
@@ -259,7 +274,10 @@
                                     <img class="icons-image" src="{{ asset('newWebsite/Images/arrorwright.png') }}" alt="">
                                 </div>
                                 <div class="list">
+                                    <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
+
                                     <p class="card-text"> عرض جهاز للبيع </p>
+                                    </a>
                                     <img class="list-image" src="{{ asset('newWebsite/Images/mobile.png') }}" alt="">
                                 </div>
                             </div>
@@ -270,8 +288,11 @@
                                     <img class="icons-image" src="{{ asset('newWebsite/Images/arrorwright.png') }}" alt="">
                                 </div>
                                 <div class="list">
+                                    <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
+
                                     <p class="card-text">عرض مواشي للبيع </p>
-                                    <img class="list-image" src="{{ asset('newWebsite/Images/Sheep.png') }}" alt="">
+                                    </a>
+                                     <img class="list-image" src="{{ asset('newWebsite/Images/Sheep.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="horizontal">
@@ -281,7 +302,10 @@
                                     <img class="icons-image" src="{{ asset('newWebsite/Images/arrorwright.png') }}" alt="">
                                 </div>
                                 <div class="list">
+                                    <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
+
                                     <p class="card-text"> عرض اثاث للبيع </p>
+                                    </a>
                                     <img class="list-image" src="{{ asset('newWebsite/Images/sofa.png') }}" alt="">
                                 </div>
                             </div>

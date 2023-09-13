@@ -346,7 +346,7 @@
                         <div class="wizard">
 
 
-                            <form role="form" action="index.html" class="login-box">
+                            <form role="form" action="{{ route('home') }}" class="login-box">
                                 {{-- <div class="tab-content" id="main_form"> --}}
                                     {{-- <div class="tab-pane active" role="tabpanel" id="step1"> --}}
                                         {{-- <div class="row"> --}}
@@ -358,11 +358,17 @@
                                                 <div class="form-group">
                                                     <input class="form-control" type="text" name="name" placeholder="كلمه المرور">
                                                 </div>
+                                                <p>نسيت كلمه المرور ؟</p>
                                                 <div class="form-group text-center"> <!-- Add a text-center class to center the button -->
                                                     <button type="button" class="default-btn next-step" style="font-size: 20px; width: 200px; text-align: center;">
-                                                        تسجيل الدخول
+                                                        <a style="color: white" href="{{ route('home') }}
+                                                        ">                                                        تسجيل الدخول
+                                                        </a>
                                                       </button>
-
+                                                      <p class="text-center" style="color: black"><a href="{{ route('register') }}"
+                                                        style="color: black"
+                                                        >
+                                                        انشاء حساب جديد</a></p>
 
                                                 </div>
                                             </div>

@@ -12,8 +12,22 @@ class DashboardController extends Controller
         return view('dashboard.choose');
     }
 
-    public function home()
+    public function home($segment)
     {
+
+
+
+
         return view('dashboard.home');
+        // if ($segment === 'section') {
+
+        //     return view('home');
+        // } elseif ($segment === 'dashboard') {
+        //     return view('dashboard');
+        // } else {
+        //     // Handle other cases or return an error view.
+        //     return view('error');
+        // }
     }
+
 }
