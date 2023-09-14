@@ -1,12 +1,16 @@
 <div class="col-lg-7 col-md-6">
     <div class="new-sec">
         <div class="writsec">
-            {{-- <input class="edit" placeholder="اكتب اسم القسم بعد التعديل  ...."> --}}
+            <div class="input-container" style="padding-top:90px;">
+              <input type="text" class="form-control edit" placeholder="اكتب اسم القسم  ....">
+            </div>
+            <div class="button-container">
+                <a href="">
+                    <button class="btn btn-success bt-sd" style="font-size: 20px;">اضافة</button>
 
-            <button class="edit" >اكتب اسم القسم بعد التعديل  ....</button>
-            <button class="btn btn-success bt-sd"><a href="">اضافة</a></button>
-
-        </div>
+                </a>
+            </div>
+          </div>
 
        <div class="ttilesec">
         <h5>الاقسام المتاحة</h5>

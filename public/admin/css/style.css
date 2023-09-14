@@ -23,13 +23,13 @@
     padding: 0 20px;
     margin: 20px auto;
   }
-  
+
   .search-image {
     margin-right: 20px;
     width: 40px; /* قم بتعديل حجم الصورة حسب الحاجة */
     height: auto; /* حتى تحافظ على نسب الصورة */
   }
-  
+
   .search-input {
     border: none;
     background: transparent;
@@ -52,23 +52,23 @@
     .search-container {
       width: 70%;
       height: 60px;
-      padding: 20px 15px; 
+      padding: 20px 15px;
     }
-  
+
     .search-image {
       margin-right: 10px; /* تقليل هامش الصورة */
     }
-  
+
     .search-input {
       font-size: 16px; /* حجم النص الأصلي */
       padding: 8px 0; /* زيادة المساحة الداخلية للحقل النصي */
     }
-  
+
     .search-input::placeholder {
       font-size: 14px; /* حجم النص في placeholder */
     }
   }
-  
+
   /* العرض الصغير (xs) */
   @media (max-width: 575px) {
     .search-input::placeholder {
@@ -93,7 +93,7 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 font-family:  title sec;
-}  
+}
 .alert button i{
 float: right;
 margin-right: 10px;
@@ -130,25 +130,25 @@ font-family:  title sec;
     .alert {
       margin-left: 0; /* إزالة الهامش الأيسر */
     }
-  
+
     .alert button,
     .alert button:nth-child(2) {
       width: 100%; /* جعل عرض الأزرار يمتلئ بالكامل */
     }
-  
+
     .alert button i {
       float: none; /* إلغاء التمرير إلى اليمين للرمز */
       margin-right: 0; /* إزالة الهامش الأيمن */
     }
   }
-  
+
   /* شاشات متوسطة (sm) */
   @media (max-width: 767px) {
     .alert button {
       font-size: 14px; /* تصغير حجم النص في الأزرار */
     }
   }
-  
+
   /* يمكنك إضافة المزيد من التعديلات وفقًا لاحتياجات التصميم الخاصة بك */
   .all-buutton{
     width: 535px;
@@ -170,22 +170,22 @@ margin-bottom: 30px;
     font-weight: 700;
     line-height: normal;
     margin-right: 70px;
- 
+
   }
   .all-buutton a{
     margin-left:40px ;
   }
- 
+
 
   .all-div{
-  
+
 margin-left: 40px;
   }
   @media (max-width: 768px) {
    .all-buutton{
     max-width: 100%;
     display: none;
-    
+
    }
    .all-buutton a{
     margin-left:20px ;
@@ -213,19 +213,27 @@ margin-left: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 .writsec button{
     margin-top: 100px;
     margin-right: 21px;
-  
+
+
 }
+.input-container {
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+
+  .button-container {
+    margin-left: 10px; /* Adjust the margin as needed */
+  }
 .writsec button a{
     font-size: 20px;
     font-weight: 500;
     color: #fff;
     font-family:  title sec;
- 
+
 }
 
 .bt-sd{
@@ -289,7 +297,7 @@ direction: rtl;
 .all-buutton2 > div button{
    margin: 20px ;
    margin-left: 30px;
-  
+
 }
 .btn-add{
 width: 130px;
@@ -326,7 +334,7 @@ background: #FF543E;
         margin-left: 0;
         padding: 20px;
     }
-    
+
 
     .all-buutton2 > div button {
         margin: 10px 0;
@@ -340,8 +348,8 @@ background: #FF543E;
     .our-sec{
         background-color: #0C396E;
         width: 100%;
-      
-      
+
+
     }
     .all-buutton2{
         margin-bottom: 30px;
@@ -414,9 +422,9 @@ background: #FF543E;
     /* display: none; */
     padding-top: 20px 30px;
    }
- 
+
 }
- 
+
 
 @media (max-width: 767px) {
   .box{
@@ -428,7 +436,7 @@ background: #FF543E;
   padding-top: 25px;
   }
 }
- 
+
 
 .nav-sec .navbar-inverse{
   background-color: #0762CD;

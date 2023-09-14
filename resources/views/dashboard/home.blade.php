@@ -81,7 +81,7 @@
            <div class="row">
 
 
-                <div class="all-div">
+                <div class="all-div" style="padding-right:40px; ">
 
 
                     @if (request()->segment(2) === 'sections')
@@ -93,7 +93,7 @@
                     @elseif (request()->segment(2) == 'privacy')
                     @include('dashboard.body.privacy')
                     @elseif (request()->segment(2) == 'all-users')
-                    @include('dashboard.body.all_users')
+                    @include('dashboard.body.users.all_users')
                     @elseif (request()->segment(2) == 'areas')
                     @include('dashboard.body.areas')
                     @elseif (request()->segment(2) == 'common-questions')
@@ -106,9 +106,11 @@
                     @include('dashboard.body.subscribed_members')
                     @elseif (request()->segment(2) == 'security-questions')
                     @include('dashboard.body.security_questions')
+                    @elseif (request()->segment(2) == 'user-details')
+                    @include('dashboard.body.users.user_details')
 
 
-
+                    @else
 
                     @endif
 

@@ -14,20 +14,6 @@ class DashboardController extends Controller
 
     public function home($segment)
     {
-
-
-
-
         return view('dashboard.home');
-        // if ($segment === 'section') {
-
-        //     return view('home');
-        // } elseif ($segment === 'dashboard') {
-        //     return view('dashboard');
-        // } else {
-        //     // Handle other cases or return an error view.
-        //     return view('error');
-        // }
     }
-
 }
