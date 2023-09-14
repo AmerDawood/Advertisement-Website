@@ -84,10 +84,32 @@
                 <div class="all-div">
 
 
-                    @if (request()->segment(3) === 'home')
-                    @include('dashboard.body.body1')
-                    @elseif(request()->segment(3) == 'privacy')
-                    @include('dashboard.body.body2')
+                    @if (request()->segment(2) === 'sections')
+                    @include('dashboard.body.sections')
+                    @elseif(request()->segment(2) == 'term-of-use')
+                    @include('dashboard.body.terms_of_use')
+                    @elseif (request()->segment(2) == 'suggested_questions')
+                    @include('dashboard.body.suggested_questions')
+                    @elseif (request()->segment(2) == 'privacy')
+                    @include('dashboard.body.privacy')
+                    @elseif (request()->segment(2) == 'all-users')
+                    @include('dashboard.body.all_users')
+                    @elseif (request()->segment(2) == 'areas')
+                    @include('dashboard.body.areas')
+                    @elseif (request()->segment(2) == 'common-questions')
+                    @include('dashboard.body.common_questions')
+                    @elseif (request()->segment(2) == 'evaluation-system')
+                    @include('dashboard.body.evaluation_system')
+                    @elseif (request()->segment(2) == 'bank-account')
+                    @include('dashboard.body.bank_account')
+                    @elseif (request()->segment(2) == 'subscribed-members')
+                    @include('dashboard.body.subscribed_members')
+                    @elseif (request()->segment(2) == 'security-questions')
+                    @include('dashboard.body.security_questions')
+
+
+
+
                     @endif
 
 
@@ -96,7 +118,7 @@
                   <div class="col-lg-5 col-md-6 drop-down">
 
                         <div class="all-buutton">
-                           <a href="">
+                           <a href="{{  route('dashboard',['segment' => 'sections'])  }}">
                             <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                            </a>
                            <h4>اضافة قسم </h4>
@@ -105,19 +127,19 @@
 
 
 
-
+                        {{--
                         <div class="all-buutton">
                            <a href="{{ route('dashboard',['segment' => 'privacy']) }}">
                             <img src="{{ asset('admin/image/Vector (1).png') }}" alt="">
                            </a>
                            <h4>تعديل قسم</h4>
-                        </div>
+                        </div> --}}
 
 
 
 
                         <div class="all-buutton">
-                           <a href="">
+                           <a href="{{ route('dashboard',['segment' => 'term-of-use']) }}">
                             <img src="{{ asset('admin/image/Vector (2).png') }}" alt="">
                            </a>
                            <h4>إضافة شروط استخدام </h4>
@@ -128,7 +150,7 @@
 
 
                         <div class="all-buutton">
-                           <a href="">
+                           <a href="{{ route('dashboard',['segment' => 'suggested_questions']) }}">
                             <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                            </a>
                            <h4>اضافة اسالة مقترحة</h4>
@@ -137,7 +159,7 @@
 
 
                         <div class="all-buutton">
-                           <a href="">
+                           <a href="{{ route('dashboard',['segment' => 'privacy']) }}">
                             <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                            </a>
                            <h4>سياسة الخصوصية</h4>
@@ -146,7 +168,7 @@
 
 
                         <div class="all-buutton">
-                           <a href="">
+                           <a href="{{ route('dashboard',['segment' => 'all-users']) }}">
                             <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                            </a>
                            <h4> جميع المستخدمين</h4>
@@ -157,7 +179,7 @@
 
 
                         <div class="all-buutton">
-                          <a href="">
+                          <a href="{{ route('dashboard',['segment' => 'areas']) }}">
                            <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                           </a>
                           <h4>المناطق  </h4>
@@ -167,7 +189,7 @@
 
 
                        <div class="all-buutton">
-                          <a href="">
+                          <a href="{{ route('dashboard',['segment'=>'common-questions']) }}">
                            <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                           </a>
                           <h4>الاسئلة الشائعة</h4>
@@ -176,7 +198,7 @@
 
 
                        <div class="all-buutton">
-                          <a href="">
+                          <a href="{{ route('dashboard',['segment'=>'evaluation-system']) }}">
                            <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                           </a>
                           <h4>نظام التقيم</h4>
@@ -185,7 +207,7 @@
 
 
                        <div class="all-buutton">
-                          <a href="">
+                          <a href="{{ route('dashboard',['segment'=>'bank-account']) }}">
                            <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                           </a>
                           <h4>رقم حساب البنك</h4>
@@ -194,7 +216,7 @@
 
 
                        <div class="all-buutton">
-                          <a href="">
+                          <a href="{{ route('dashboard',['segment'=>'subscribed-members']) }}">
                            <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                           </a>
                           <h4>  الاعضاء المشتركين   </h4>
@@ -202,7 +224,7 @@
 
 
                        <div class="all-buutton">
-                          <a href="">
+                          <a href="{{ route('dashboard',['segment'=>'security-questions']) }}">
                            <img src="{{ asset('admin/image/Vector.png') }}" alt="">
                           </a>
                           <h4>   اسالة الامان   </h4>

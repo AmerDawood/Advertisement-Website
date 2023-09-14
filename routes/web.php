@@ -84,7 +84,7 @@ Route::get('dashboard/choose' ,[DashboardController::class,'choose']);
 // Route::get('dashboard/home' ,[DashboardController::class,'home']);
 
 
-Route::get('/dashboard/home/{segment}',[DashboardController::class,'home'])->name('dashboard');
+Route::get('/dashboard/{segment}',[DashboardController::class,'home'])->name('dashboard');
 
 
 
