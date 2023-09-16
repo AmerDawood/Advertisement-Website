@@ -72,7 +72,7 @@
                     <nav class="cha-header__nav js-cha-header__nav">
                         <ul class="cha-header__nav-list">
                             <li>
-                                <a href="" class="cha-header__nav-link">المتابعة
+                                <a href="{{ route('followers.index') }}" class="cha-header__nav-link">المتابعة
                                     <svg width="29" height="29" viewBox="0 0 29 29" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -83,7 +83,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="cha-header__nav-link">رسائل <svg width="36" height="27"
+                                <a href="{{ route('chat.index') }}" class="cha-header__nav-link">رسائل <svg width="36" height="27"
                                         viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M0.949219 0.0400391V26.96H35.9492V0.0400391H0.949219ZM30.5625 2.7334L18.4492 14.8467L6.33594 2.7334H30.5625ZM33.2559 24.2666H3.64258V4.08008L18.4492 18.8867L33.2559 4.08008V24.2666Z"
@@ -94,7 +94,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="cha-header__nav-link">الاشعارات
+                                <a href="{{ route('notifications.index') }}" class="cha-header__nav-link">الاشعارات
                                     <svg width="20" height="23" viewBox="0 0 20 23" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -105,7 +105,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="cha-header__nav-link">المفضلة
+                                <a href="{{ route('favorites.index') }}" class="cha-header__nav-link">المفضلة
                                     <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path

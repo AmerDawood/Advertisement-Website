@@ -1,11 +1,17 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Website\AdvertisementController;
+use App\Http\Controllers\Website\ChatController;
+use App\Http\Controllers\Website\ContactController;
 use App\Http\Controllers\Website\DiscountsController;
 use App\Http\Controllers\Website\EvaluationController;
 use App\Http\Controllers\Website\FaqsController;
+use App\Http\Controllers\Website\FavoriteController;
+use App\Http\Controllers\Website\FollowersController;
+use App\Http\Controllers\Website\NotificationsController;
 use App\Http\Controllers\Website\PaymentController;
 use App\Http\Controllers\Website\SettingsController;
 use App\Http\Controllers\Website\WebsiteController;
@@ -53,7 +59,7 @@ Route::get('/register',[AuthController::class,'register'])->name('register');
 Route::get('/forget',[AuthController::class,'forget']);
 Route::get('/add-code',[AuthController::class,'addCode']);
 Route::get('/new-password',[AuthController::class,'newPassword']);
-Route::get('/profile',[AuthController::class,'profile'])->name('profile');
+Route::get('/profile',[ProfileController::class,'index'])->name('profile');
 
 
 
@@ -73,6 +79,18 @@ Route::get('evaluation' , [EvaluationController::class ,'index'])->name('evaluat
 
 
 
+Route::resource('contacts', ContactController::class);
+Route::resource('followers', FollowersController::class);
+Route::resource('notifications', NotificationsController::class);
+Route::resource('favorites', FavoriteController::class);
+
+Route::get('settings/notifications',[NotificationsController::class,'settings'])->name('settings.notifications');
+
+
+
+Route::resource('chat', ChatController::class);
+
+// Route::get('profile',[ProfileController::class,'index']);
 
 
 // Dashboard

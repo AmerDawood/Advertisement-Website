@@ -102,7 +102,7 @@
                         </svg>
                         الحسابات والارقام الموقوفة
                     </a></li>
-                <li><a href="">
+                <li><a href="{{ route('contacts.index') }}">
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
