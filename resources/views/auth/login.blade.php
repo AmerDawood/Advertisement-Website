@@ -346,41 +346,29 @@
                         <div class="wizard">
 
 
-                            <form role="form" action="{{ route('home') }}" class="login-box">
-                                {{-- <div class="tab-content" id="main_form"> --}}
-                                    {{-- <div class="tab-pane active" role="tabpanel" id="step1"> --}}
-                                        {{-- <div class="row"> --}}
-                                            <div class="col-md-12 mb-3">
-                                                <div class="form-group">
-                                                    <input class="form-control" type="text" name="name" placeholder="رقم الهاتف  ">
-                                                </div>
+                            <form role="form" action="{{ route('login') }}" method="POST" class="login-box">
+                                @csrf <!-- Add CSRF token for security -->
 
-                                                <div class="form-group">
-                                                    <input class="form-control" type="text" name="name" placeholder="كلمه المرور">
-                                                </div>
-                                                <p>نسيت كلمه المرور ؟</p>
-                                                <div class="form-group text-center"> <!-- Add a text-center class to center the button -->
-                                                    <button type="button" class="default-btn next-step" style="font-size: 20px; width: 200px; text-align: center;">
-                                                        <a style="color: white" href="{{ route('home') }}
-                                                        ">                                                        تسجيل الدخول
-                                                        </a>
-                                                      </button>
-                                                      <p class="text-center" style="color: black"><a href="{{ route('register') }}"
-                                                        style="color: black"
-                                                        >
-                                                        انشاء حساب جديد</a></p>
-
-                                                </div>
-                                            </div>
-
-                                        {{-- </div> --}}
-
-                                    {{-- </div> --}}
-
-
-                                {{-- </div> --}}
-
+                                <div class="col-md-12 mb-3">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="phone_number" placeholder="رقم الهاتف">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="form-group">
+                                        <input class="form-control" type="password" name="password" placeholder="كلمة المرور">
+                                    </div>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="default-btn next-step" style="font-size: 20px; width: 200px; text-align: center;">
+                                        تسجيل الدخول
+                                    </button>
+                                    <p class="text-center" style="color: black">
+                                        <a href="{{ route('register') }}" style="color: black">إنشاء حساب جديد</a>
+                                    </p>
+                                </div>
                             </form>
+
                         </div>
                     </div>
                 </div>

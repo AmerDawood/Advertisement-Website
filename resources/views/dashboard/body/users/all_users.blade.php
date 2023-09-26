@@ -7,24 +7,13 @@
        <div class="our-sec">
         <div class="col-lg-4 col-md-4">
 
-                <div class="all-buutton2">
-                   <div>
-                    <button type="button" class="btn btn-primary btn-lg btn-add"> ID </button>
-                    <a href="{{ route('dashboard',['segment'=>'user-details/',1]) }}">
-                        <button type="button" class="btn btn-primary btn-lg btn-add">التفاصيل</button>
-
-
-                    </a>
-                    <button type="button" class="btn btn-primary btn-lg bnt-dan">تجميد الحساب</button>
-                   </div>
-                </div>
 
 
 
-
+                @foreach ($users as $user)
                 <div class="all-buutton2">
                     <div>
-                     <button type="button" class="btn btn-primary btn-lg btn-add"> ID </button>
+                     <button type="button" class="btn btn-primary btn-lg btn-add">  {{ $user->first_name }} </button>
                      <a href="{{ route('dashboard',['segment'=>'user-details/',1]) }}">
                          <button type="button" class="btn btn-primary btn-lg btn-add">التفاصيل</button>
 
@@ -33,6 +22,13 @@
                      <button type="button" class="btn btn-primary btn-lg bnt-dan">تجميد الحساب</button>
                     </div>
                  </div>
+
+                @endforeach
+
+
+
+
+
 
 
         </div>

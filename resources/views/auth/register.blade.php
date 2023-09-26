@@ -365,56 +365,55 @@
                                     </li>
                                 </ul>
                             </div>
-
-                            <form role="form" action="{{ route('login') }}" class="login-box">
+                            <form role="form" action="{{ route('register') }}" method="POST" class="login-box">
+                                @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                                @csrf <!-- Add CSRF token for security -->
                                 <div class="tab-content" id="main_form">
+                                    <!-- Step 1 -->
                                     <div class="tab-pane active" role="tabpanel" id="step1">
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" name="name"
-                                                        placeholder="الاسم الاول">
+                                                    <input class="form-control" type="text" name="first_name" placeholder="الاسم الأول">
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" name="name"
-                                                        placeholder="اسم العائلة">
+                                                    <input class="form-control" type="text" name="last_name" placeholder="اسم العائلة">
                                                 </div>
                                             </div>
-
                                         </div>
                                         <ul class="list-inline pull-right">
                                             <li><button type="button" class="default-btn next-step">التالي</button></li>
                                         </ul>
                                     </div>
+                                    <!-- Step 2 -->
                                     <div class="tab-pane" role="tabpanel" id="step2">
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="email" name="name"
-                                                        placeholder="البريد الإلكتروني">
+                                                    <input class="form-control" type="email" name="email" placeholder="البريد الإلكتروني">
                                                 </div>
                                             </div>
-
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="tel" name="name"
-                                                        placeholder="رقم الهاتف">
+                                                    <input class="form-control" type="tel" name="phone_number" placeholder="رقم الهاتف">
                                                 </div>
                                             </div>
                                         </div>
-
                                         <ul class="list-inline pull-right">
                                             <li><button type="button" class="default-btn next-step">التالي</button></li>
-                                            <li><button type="button" class="default-btn prev-step">للخلف</button></li>
-                                            </li>
-                                            <li>
-                                                <button type="button"
-                                                    class="default-btn next-step skip-btn">تخطي</button>
-                                            </li>
                                         </ul>
                                     </div>
+                                    <!-- Step 3 -->
                                     <div class="tab-pane" role="tabpanel" id="step3">
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
@@ -422,51 +421,43 @@
                                                     <label>البلد *</label>
                                                     <select name="country" class="form-control" id="country">
                                                         <option value="" selected>اختار</option>
-                                                        <option value="egeptt">مصر </option>
-                                                        <option value="ps">فلسطين </option>
-                                                        <option value="KSA">المملكة العربية السعودية </option>
-                                                        <option value="jo">الاردن </option>
-                                                        <option value="">الإمارات العربية المتحدة </option>
-                                                        <option value="NO">الكويت </option>
+                                                        <option value="egeptt">مصر</option>
+                                                        <option value="ps">فلسطين</option>
+                                                        <option value="KSA">المملكة العربية السعودية</option>
+                                                        <option value="jo">الأردن</option>
+                                                        <option value="">الإمارات العربية المتحدة</option>
+                                                        <option value="NO">الكويت</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <ul class="list-inline pull-right">
                                             <li><button type="button" class="default-btn next-step">التالي</button></li>
-                                            <li><button type="button" class="default-btn prev-step">للخلف</button></li>
-                                            </li>
-                                            <li>
-                                                <button type="button"
-                                                    class="default-btn next-step skip-btn">تخطي</button>
-                                            </li>
                                         </ul>
                                     </div>
+                                    <!-- Step 4 -->
                                     <div class="tab-pane" role="tabpanel" id="step4">
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="password" name="name"
-                                                        placeholder="كلمة المرور">
+                                                    <input class="form-control" type="password" name="password" placeholder="كلمة المرور">
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-3">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="password" name="name"
-                                                        placeholder="تأكيد كلمة المرور">
+                                                    <input class="form-control" type="password" name="password_confirmation" placeholder="تأكيد كلمة المرور">
                                                 </div>
                                             </div>
                                         </div>
-
                                         <ul class="list-inline pull-right">
-                                            <li><button type="submit" class="default-btn next-step">تسجيل </button></li>
-                                            <li><button type="button" class="default-btn prev-step">للخلف</button></li>
+                                            <li><button type="submit" class="default-btn next-step">تسجيل</button></li>
                                         </ul>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-
                             </form>
+
+
                         </div>
                     </div>
                 </div>

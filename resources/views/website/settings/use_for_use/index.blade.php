@@ -46,11 +46,14 @@
                     <dic class="row">
                         <div class="card">
                             <div class="card-body" dir="rtl">
-                                <h4 class="mt-3">الطريقة الثانية:تحويل البنكي
+                                <h4 class="mt-3">المادة الأولى : تعريف
                                 </h4>
-                                <p class="mt-5 mb-5">الدفع بالتحويل البنكي لأحد الحسابات التالية ثم تعبئة<a href="">
-                                        نموذج التحويل</a> والانتظار اسبوع
-                                    للتفعيل.</p>
+                                <p class="mt-5 mb-5"> مادة 1</p>
+                            </div>
+                            <div class="card-body" dir="rtl">
+                                <h4 class="mt-3">المادة الأولى : تعريف
+                                </h4>
+                                <p class="mt-5 mb-5"> مادة 1</p>
                             </div>
                         </div>
                     </dic>
@@ -64,29 +67,14 @@
                     <dic class="row">
                         <div class="card">
                             <div class="card-body" dir="rtl">
-                                <h4 class="mt-3">الطريقة الثانية:تحويل البنكي
+                                <h4 class="mt-3">المادة الأولى : تعريف
                                 </h4>
-                                <p class="mt-5 mb-5">الدفع بالتحويل البنكي لأحد الحسابات التالية ثم تعبئة<a href="">
-                                        نموذج التحويل</a> والانتظار اسبوع
-                                    للتفعيل.</p>
+                                <p class="mt-5 mb-5"> مادة 1</p>
                             </div>
-                        </div>
-                    </dic>
-                </div>
-            </div>
-
-
-
-            <div class="blog text-center pt-5 pb-5" id="blog ">
-                <div class="container">
-                    <dic class="row">
-                        <div class="card">
                             <div class="card-body" dir="rtl">
-                                <h4 class="mt-3">الطريقة الثانية:تحويل البنكي
+                                <h4 class="mt-3">المادة الأولى : تعريف
                                 </h4>
-                                <p class="mt-5 mb-5">الدفع بالتحويل البنكي لأحد الحسابات التالية ثم تعبئة<a href="">
-                                        نموذج التحويل</a> والانتظار اسبوع
-                                    للتفعيل.</p>
+                                <p class="mt-5 mb-5"> مادة 1</p>
                             </div>
                         </div>
                     </dic>
@@ -99,11 +87,34 @@
                     <dic class="row">
                         <div class="card">
                             <div class="card-body" dir="rtl">
-                                <h4 class="mt-3">الطريقة الثانية:تحويل البنكي
+                                <h4 class="mt-3">المادة الأولى : تعريف
                                 </h4>
-                                <p class="mt-5 mb-5">الدفع بالتحويل البنكي لأحد الحسابات التالية ثم تعبئة<a href="">
-                                        نموذج التحويل</a> والانتظار اسبوع
-                                    للتفعيل.</p>
+                                <p class="mt-5 mb-5"> مادة 1</p>
+                            </div>
+                            <div class="card-body" dir="rtl">
+                                <h4 class="mt-3">المادة الأولى : تعريف
+                                </h4>
+                                <p class="mt-5 mb-5"> مادة 1</p>
+                            </div>
+                        </div>
+                    </dic>
+                </div>
+            </div>
+
+
+            <div class="blog text-center pt-5 pb-5" id="blog ">
+                <div class="container">
+                    <dic class="row">
+                        <div class="card">
+                            <div class="card-body" dir="rtl">
+                                <h4 class="mt-3">المادة الأولى : تعريف
+                                </h4>
+                                <p class="mt-5 mb-5"> مادة 1</p>
+                            </div>
+                            <div class="card-body" dir="rtl">
+                                <h4 class="mt-3">المادة الأولى : تعريف
+                                </h4>
+                                <p class="mt-5 mb-5"> مادة 1</p>
                             </div>
                         </div>
                     </dic>

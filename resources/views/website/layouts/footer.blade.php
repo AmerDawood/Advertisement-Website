@@ -37,7 +37,7 @@
                                 fill="white" />
                         </svg>الاسئلة الشائعة
                     </a></li>
-                <li><a href="">
+                <li><a href="{{ route('memberships.index') }}">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -63,7 +63,7 @@
                                 fill="white" />
                         </svg>زيادة مشاهدات الاعلانات
                     </a></li>
-                <li><a href="">
+                {{-- <li><a href="">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path opacity="0.05" fill-rule="evenodd" clip-rule="evenodd"
@@ -101,7 +101,7 @@
                                 fill="white" />
                         </svg>
                         الحسابات والارقام الموقوفة
-                    </a></li>
+                    </a></li> --}}
                 <li><a href="{{ route('contacts.index') }}">
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                             xmlns="http://www.w3.org/2000/svg">

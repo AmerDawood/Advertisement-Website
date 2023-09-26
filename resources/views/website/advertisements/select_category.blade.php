@@ -303,7 +303,6 @@
                                 </div>
                                 <div class="list">
                                     <a href="{{ route('create_ads') }}" style="text-decoration: none;padding-right:10px;">
-
                                     <p class="card-text"> عرض اثاث للبيع </p>
                                     </a>
                                     <img class="list-image" src="{{ asset('newWebsite/Images/sofa.png') }}" alt="">

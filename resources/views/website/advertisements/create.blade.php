@@ -26,14 +26,24 @@
                                         </a>
                                         </h3>
                                     </div>
+                                    @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                      @endif
                                     <div class="card-body px-5">
-                                        <form class="form" id="formLogin" name="" role="form">
+                                        <form class="form" id="formLogin" method="POST" action="{{ route('store.ads') }}" name="" role="form" enctype="multipart/form-data">
+                                            @csrf
                                             <div class="form-group my-4">
-                                                <input class="form-control " id="" name="" placeholder="عنوان الاعلان "
+                                                <input class="form-control " id="" name="title" placeholder="عنوان الاعلان "
                                                     type="text">
                                             </div>
                                             <div class="form-group ">
-                                                <div class="wrapper-dropdown col-md-12" id="dropdown"> <svg class="arrow"
+                                                {{-- <div class="wrapper-dropdown col-md-12" id="dropdown"> <svg class="arrow"
                                                         id="drp-arrow" width="24" height="24" viewBox="0 0 24 24"
                                                         fill="none" xmlns="http://www.w3.org/2000/svg"
                                                         class="transition-all ml-auto rotate-180">
@@ -69,36 +79,58 @@
                                                         <li class="item">عقارات </li>
                                                     </ul>
 
-                                                </div>
+                                                </div> --}}
                                             </div>
                                             <div class="form-group row  my-4">
                                                 <div class="col-12 col-lg-12">
                                                     <input class="  form-control" id="" type="tel"
-                                                        placeholder="رقم الهاتف ">
+                                                        placeholder="رقم الهاتف " name="phone">
                                                 </div>
                                             </div>
+
                                             <div class="form-group row  my-4">
                                                 <div class="col-12 col-lg-12 ">
-                                                    <input class="  form-control" id="" type="text" placeholder="السعر  ">
+                                                    <input class="  form-control" id="" type="text" placeholder="السعر  " name="price">
                                                 </div>
 
+                                            </div>
+
+
+                                            <div class="form-group row  my-4">
+                                                <div class="col-12 col-lg-12">
+                                                    <input class="  form-control" id="" type="file"
+                                                        placeholder="صورة" name="image">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row  my-4">
+                                                <div class="col-12 col-lg-12">
+                                                    <input class=" form-control" id="" type="text"
+                                                        placeholder="موقع" name="location">
+                                                </div>
                                             </div>
 
                                             <div class="form-group  my-4">
-                                                <textarea name="" id="" class=" form-control  "
-                                                    placeholder="التفاصيل..."></textarea>
+                                                <textarea id="" class=" form-control "
+                                                    placeholder="التفاصيل..." name="description"></textarea>
                                             </div>
-                                          
+
                                             <div class="form-group">
+                                                <input type="submit" class="btn btn-primary fs-16 btn-lg btn-block" type="button" value="انشاء الإعلان" style="font-size: 16px; padding: 10px; font-weight: 600;">
+                                            </div>
+
+
+
+                                            {{-- <div class="form-group">
                                                 <input class="btn btn-primary fs-16 btn-lg btn-block" type="button" value="انشاء الإعلان" onclick="redirectToAnotherPage()" style="font-size: 16px; padding: 10px; font-weight: 600;">
                                             </div>
 
-                                            <script>
+                                    <script>
                                                 function redirectToAnotherPage() {
                                                     // Change the URL to the desired destination page
                                                     window.location.href = '{{ route('create_details_ads') }}';
                                                 }
-                                            </script>
+                                            </script>  --}}
 
                                         </form>
                                     </div><!--/card-block-->
