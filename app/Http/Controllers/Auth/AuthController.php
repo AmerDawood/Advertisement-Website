@@ -79,4 +79,11 @@ public function login(Request $request)
     return redirect()->route('login')->with('error', 'Invalid credentials. Please try again.');
 }
 
+public function logout()
+{
+    Auth::logout(); // This will log the user out
+
+    return redirect()->route('home'); // Redirect to the login page or any other desired location
+}
+
 }

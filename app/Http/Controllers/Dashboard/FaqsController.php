@@ -52,11 +52,11 @@ class FaqsController extends Controller
         $faqs = Faqs::find($id);
 
         if (!$faqs) {
-            return redirect()->route('dashboard', ['segment' => 'common-questions'])->with('error', 'Common questions Question not found');
+            return redirect()->route('dashboard', ['segment' => 'common-questions'])->with('error', 'FAQs questions Question not found');
         }
 
         $faqs->delete();
 
-        return redirect()->route('dashboard',  ['segment' => 'common-questions'])->with('msg', 'Common questions  deleted successfully');
+        return redirect()->route('dashboard',  ['segment' => 'common-questions'])->with('msg', 'FAQs questions  deleted successfully');
     }
 }

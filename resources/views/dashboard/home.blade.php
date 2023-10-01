@@ -86,6 +86,8 @@
 
                     @if (request()->segment(2) === 'sections')
                     @include('dashboard.body.sections')
+                    @elseif(request()->segment(2) == 'sliders')
+                    @include('dashboard.body.slider')
                     @elseif(request()->segment(2) == 'term-of-use')
                     @include('dashboard.body.terms_of_use')
                     @elseif (request()->segment(2) == 'suggested_questions')
@@ -119,6 +121,9 @@
 
                   <div class="col-lg-5 col-md-6 drop-down">
 
+
+
+
                         <div class="all-buutton">
                            <a href="{{  route('dashboard',['segment' => 'sections'])  }}">
                             <img src="{{ asset('admin/image/Vector.png') }}" alt="">
@@ -126,18 +131,12 @@
                            <h4>اضافة قسم </h4>
                         </div>
 
-
-
-
-                        {{--
                         <div class="all-buutton">
-                           <a href="{{ route('dashboard',['segment' => 'privacy']) }}">
-                            <img src="{{ asset('admin/image/Vector (1).png') }}" alt="">
-                           </a>
-                           <h4>تعديل قسم</h4>
-                        </div> --}}
-
-
+                            <a href="{{  route('dashboard',['segment' => 'sliders'])  }}">
+                             <img src="{{ asset('admin/image/Vector.png') }}" alt="">
+                            </a>
+                            <h4> الصور المتحركة (السلايدر) </h4>
+                         </div>
 
 
                         <div class="all-buutton">

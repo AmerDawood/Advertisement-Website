@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Section;
 use Illuminate\Http\Request;
 
 class AdvertisementController extends Controller
 {
     public function create(){
-        return view('website.advertisements.create');
+        $sections = Section::all();
+        return view('website.advertisements.create',compact('sections'));
     }
 
     public function store(Request $request){
@@ -20,6 +22,7 @@ class AdvertisementController extends Controller
             'image' => 'required',
             'location' => 'required',
             'phone' => 'required',
+            'user_id' =>'required'
 
         ]);
 
@@ -32,7 +35,8 @@ class AdvertisementController extends Controller
             'image' => $img_name,
             'location' => $request->location,
             'price' => $request->price,
-            'phone' =>$request->phone
+            'phone' =>$request->phone,
+            'user_id' => $request->user_id,
 
         ]);
 
@@ -42,28 +46,48 @@ class AdvertisementController extends Controller
     }
 
     public function addDetails(){
-        return view('website.advertisements.add_details');
+        $sections = Section::all();
+        return view('website.advertisements.add_details',
+    compact('sections')
+    );
     }
 
 
-    public function show(){
-        return view('website.advertisements.show');
+    public function show($id){
+        $product = Product::findOrFail($id);
+        $products = Product::latest()->take(6)->get();
+
+        $sections = Section::all();
+
+
+
+        return view('website.advertisements.show',
+     [
+        'sections' =>$sections,
+        'product' =>$product,
+        'products' =>$products,
+     ]
+    );
     }
 
 
     public function selectCategory(){
-
-        return view('website.advertisements.select_category');
+        $sections = Section::all();
+        return view('website.advertisements.select_category',compact('sections'));
 
     }
 
     public function addPrivacy ()
     {
-        return view('website.advertisements.add_privacy');
+        $sections = Section::all();
+
+        return view('website.advertisements.add_privacy',compact('sections'));
     }
 
     public function best_advers ()
     {
-        return view('website.advertisements.best_advers');
+        $sections = Section::all();
+
+        return view('website.advertisements.best_advers',compact('sections'));
     }
 }

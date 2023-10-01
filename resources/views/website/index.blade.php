@@ -4,6 +4,7 @@
 
 @section('content')
 <!-- **************** -->
+
 <section class="hero">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -12,15 +13,11 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset('website/assets/images/slider1.svg') }}" alt="First slide">
+            @foreach ($sliders as $key => $slider)
+            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
+                <img class="d-block w-100" style="height: 600px;" src="{{ asset('uploads/sliders/'.$slider->image) }}" alt="Slide {{ $key + 1 }}">
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('website/assets/images/slider1.svg') }}" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('website/assets/images/slider1.svg') }}" alt="Third slide">
-            </div>
+        @endforeach
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -809,7 +806,7 @@
 
                 @foreach ($products as $product )
                 <div class="col col-lg-4 col-md-6 col-xs-12 col-sm-6 col-12">
-                    <a href="{{ route('advertisement.show') }}">
+                    <a href="{{ route('advertisement.show',$product->id) }}">
 
                          <div class="box">
                              <div class="img">
@@ -868,9 +865,9 @@
                                                  d="M6.99992 0.5C3.31825 0.5 0.333252 3.50225 0.333252 6.875C0.333252 10.2215 2.46075 13.859 5.78075 15.2555C6.16235 15.4163 6.57856 15.4997 6.99992 15.4997C7.42128 15.4997 7.83749 15.4163 8.21909 15.2555C11.5391 13.859 13.6666 10.2215 13.6666 6.875C13.6666 3.50225 10.6816 0.5 6.99992 0.5ZM6.99992 8C7.44195 8 7.86587 7.84196 8.17843 7.56066C8.49099 7.27936 8.66658 6.89782 8.66658 6.5C8.66658 6.10218 8.49099 5.72064 8.17843 5.43934C7.86587 5.15804 7.44195 5 6.99992 5C6.55789 5 6.13397 5.15804 5.82141 5.43934C5.50885 5.72064 5.33325 6.10218 5.33325 6.5C5.33325 6.89782 5.50885 7.27936 5.82141 7.56066C6.13397 7.84196 6.55789 8 6.99992 8Z"
                                                  fill="#0C396E" />
                                          </svg>
-                                         مكة
+                                        {{ $product->location }}
                                      </li>
-                                     <li>منذ ساعتين </li>
+                                     <li>{{ $product->created_at->diffForHumans() }} </li>
                                  </ul>
                              </div>
                          </div>

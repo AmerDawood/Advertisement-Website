@@ -16,8 +16,26 @@
     </a>
 
 
+    <div class="card" style="margin: 10px;">
+        <div class="card-body">
+          This is some text within a card body.
+        </div>
+      </div>
 
-    <p class="text-center" style="margin: 0;padding-top:200px;">لا توجد الاشعارات</p>
+      <div class="card" style="margin: 10px;">
+        <div class="card-body">
+          This is some text within a card body.
+        </div>
+      </div>
+      
+      <div class="card" style="margin: 10px;">
+        <div class="card-body">
+          This is some text within a card body.
+        </div>
+      </div>
+
+
+    {{-- <p class="text-center" style="margin: 0;padding-top:200px;">لا توجد الاشعارات</p> --}}
 </section>
 
 

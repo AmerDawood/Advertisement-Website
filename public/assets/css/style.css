@@ -1,0 +1,527 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+:root {
+    --main-color: #0762CD;
+    --dark-blue: #0C396E;
+    --gray: #DCDCDC;
+    --light: #F0F0F0;
+}
+
+@font-face {
+    font-family: light;
+    src: url(../fonts/NotoSansArabic_Condensed-Light.ttf);
+}
+
+@font-face {
+    font-family: reg;
+    src: url(../fonts/NotoSansArabic_Condensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: bold;
+    src: url(../fonts/NotoSansArabic_Condensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: en-bold;
+    src: url(../fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: en-reg;
+    src: url(../fonts/Inter-Regular.ttf);
+}
+
+.en-bold {
+    font-family: en-bold;
+}
+
+.en-reg {
+    font-family: en-reg;
+}
+
+.bold {
+    font-family: bold;
+}
+
+.light {
+    font-family: light;
+}
+.reg{
+    font-family: reg;
+}
+body {
+    font-family: reg !important;
+    padding: 0 !important;
+}
+
+/* custom */
+.container {
+    width: 85% !important;
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 97% !important;
+    }
+}
+
+/* custom */
+/* start forst page  */
+#profile {
+    background-color: var(--main-color);
+}
+
+#profile .bg {
+    background-color: var(--dark-blue);
+}
+
+#profile .bg .icons span {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile .drop ul {
+    background-color: var(--main-color);
+}
+
+#profile .profile-img {
+    position: absolute;
+    bottom: -115px;
+    left: calc(50% - 115px);
+}
+
+#profile .profile-img .image {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+}
+
+#profile .profile-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#profile .profile-img .green-dot {
+    position: absolute;
+    top: 170px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #00823C;
+}
+
+#profile .stars i,
+#profile .stars svg {
+    color: #FFDD55;
+}
+
+#profile .rate .follow {
+    background-color: var(--dark-blue);
+    padding: 10px 30px;
+}
+
+#profile .name {
+    margin-top: 70px;
+}
+
+#profile .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+}
+
+#profile .chat {
+    padding: 10px 30px;
+    background-color: var(--dark-blue);
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #profile .profile-img .image {
+        width: 180px;
+        height: 180px;
+    }
+
+    #profile .profile-img {
+        bottom: -90px;
+        left: calc(50% - 90px);
+    }
+
+    #profile .profile-img .green-dot {
+        top: 130px;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #profile .profile-img .image {
+        width: 140px;
+        height: 140px;
+    }
+
+    #profile .profile-img {
+        bottom: 10px;
+        right: 1.5rem;
+    }
+
+    #profile .profile-img .green-dot {
+        top: 100px;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #profile .profile-img .image {
+        width: 120px;
+        height: 120px;
+    }
+
+    #profile .profile-img {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* bottom:10px ;
+        right: 1.5rem; */
+    }
+
+    #profile .profile-img .green-dot {
+        top: 90px;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+#ads {
+    background-color: var(--main-color);
+}
+
+#ads .title .has-border {
+    border-bottom: 3px solid var(--dark-blue);
+}
+
+#ads img {
+    width: 249px;
+    height: 166px;
+}
+
+@media (max-width: 576px) {
+    #ads img {
+        width: 200px;
+        height: 117px;
+    }
+}
+
+/* end forst page  */
+/* start comment page  */
+#photos {
+    margin-bottom: 70px;
+}
+
+#photos .title {
+    background-color: var(--dark-blue);
+}
+
+#photos .imgs {
+    background-color: var(--main-color);
+}
+
+#comments,
+#number,
+#buttons {
+    background-color: var(--main-color);
+    margin-bottom: 70px;
+}
+
+#comments .title {
+    background-color: var(--dark-blue);
+}
+
+#comments .title button {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+#comments .chat {
+    padding: 6px 35px;
+    background-color: var(--dark-blue);
+}
+
+#number span,
+#number a {
+    background-color: var(--dark-blue);
+}
+
+#buttons .btn-group button {
+    background-color: var(--dark-blue);
+}
+
+.right form {
+    margin-bottom: 70px;
+}
+
+.right form textarea,
+.right form textarea:focus {
+    background-color: var(--main-color);
+    color: #fff;
+    resize: none;
+}
+
+.right form textarea::placeholder {
+    color: #fff;
+}
+
+.right form button,
+.right form button:hover {
+    background-color: var(--main-color);
+    padding: 10px 35px;
+}
+
+@media (max-width: 992px) {
+    .right {
+        order: 2;
+    }
+
+    #photos {
+        order: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    #comments .chat {
+        font-size: 14px !important;
+        padding: 6px 20px;
+    }
+
+    #number span,
+    #number a {
+        font-size: 14px !important;
+        width: 100% !important;
+    }
+
+    #buttons .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #buttons .btn-group button {
+        border-radius: 1.5rem !important;
+        width: 100%;
+    }
+}
+
+/* end comment page  */
+/* start chat page  */
+#chats .tab-content {
+    width: 70%;
+}
+
+#chats .nav-pills {
+    width: 100%;
+}
+
+#chats .nav-pills button {
+    background-color: var(--light);
+    border-radius: 0;
+}
+
+#chats .nav-pills button.active {
+    background-color: var(--gray);
+    border-radius: 0;
+}
+
+#chats .nav-pills button .self-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+}
+
+#chats .nav-pills button .self-img .green-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: 3px;
+    background-color: #00823C;
+}
+
+#chats .chat-title {
+    height: 10vh;
+    background-color: var(--gray);
+}
+
+#chats .chat-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+#chats .chat-img .green-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    right: 2px;
+    background-color: #00823C;
+}
+
+#chats .call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #00823C;
+    color: #fff;
+    border-radius: 50%;
+}
+
+#chats .chat-content {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--light);
+}
+
+#chats .chat-content .messages {
+    height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#chats .message-content.send {
+    background-color: #007AFF;
+    width: fit-content;
+    text-align: right;
+}
+
+#chats .message-content.reseve {
+    background-color: #545F71;
+    width: fit-content;
+    text-align: left;
+}
+
+#chats .chat-content .chat-form {
+    height: 20vh;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chats .chat-form form {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+#chats form textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    box-shadow: none;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #chats .nav-pills button .self-img {
+        width: 55px;
+        height: 55px;
+    }
+    #chats .nav-pills button .self-img img{
+        width: 55px;
+        height: 55px;
+    }
+    
+    #chats .nav-pills button .self-img .green-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: 40px;
+        right: 3px;
+        background-color: #00823C;
+    }
+    #chats .nav-pills button .username span{
+        font-size: 14px !important;
+    }
+}
+@media (min-width: 768px) {
+    .responsive-chats{
+        display: none;
+    }
+}
+.responsive-chats .chat-nav{
+    height: 9vh;
+    background-color: var(--main-color);
+}
+.responsive-chats .chat-nav span{
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .large-chat{
+        display: none !important;
+    }
+    .responsive-chats{
+        display: block;
+    }
+    .res-chat{
+        position: fixed;
+        top: 9vh;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        transition: .35s;
+    }
+    .res-chat .back{
+        color: var(--main-color);
+        cursor: pointer;
+    }
+    .res-chat .chat-form{
+        height: 20vh;
+    }
+    #chats .chat-content .messages{
+        height: 62vh;
+    }
+    #chats .responsive-chats .self-img .green-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        right: 3px;
+        background-color: #00823C;
+    }
+   
+}
+
+/* end chat page  */

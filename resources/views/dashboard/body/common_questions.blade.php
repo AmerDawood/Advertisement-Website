@@ -46,8 +46,10 @@
              @foreach ($faqs as $item)
              <div class="all-buutton2" style="height: 200px;">
                  <div>
-                  <button type="button" class="btn btn-primary btn-lg btn-add">{{ $item->answer }}</button>
-                  <button type="button" class="btn btn-primary btn-lg btn-edit" data-toggle="modal" data-target="#editSectionModal" data-section-title="{{ $item->title }}">تعديل السؤال</button>
+                    <h5 style="padding: 10px;color:white">{{ $item->question }}</h5>
+                    <p style="padding: 10px;color:white">{{ $item->answer }}</p>
+                  {{-- <button type="button" class="btn btn-primary btn-lg btn-add">{{ $item->answer }}</button> --}}
+                  {{-- <button type="button" class="btn btn-primary btn-lg btn-edit" data-toggle="modal" data-target="#editSectionModal" data-section-title="{{ $item->title }}">تعديل السؤال</button>
 
                   <div class="modal fade" id="editSectionModal" tabindex="-1" role="dialog" aria-labelledby="editSectionModalLabel" aria-hidden="true">
                      <div class="modal-dialog" role="document">
@@ -78,11 +80,11 @@
                              </form>
                          </div>
                      </div>
-                 </div>
+                 </div> --}}
 
 
 
-                  <form action="{{ route('terms.destroy',['id'=>$item->id]) }}" method="POST">
+                  <form action="{{ route('faqs.destroy',['id'=>$item->id]) }}" method="POST">
                   @csrf
                   @method('DELETE')
                   <button type="button" class="btn btn-primary btn-lg bnt-dan btn-delete">حذف السؤال</button>

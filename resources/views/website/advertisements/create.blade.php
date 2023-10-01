@@ -121,6 +121,10 @@
 
 
 
+                                            <input type="text" hidden name="user_id" value="{{ auth()->user()->id }}" id="">
+
+
+
                                             {{-- <div class="form-group">
                                                 <input class="btn btn-primary fs-16 btn-lg btn-block" type="button" value="انشاء الإعلان" onclick="redirectToAnotherPage()" style="font-size: 16px; padding: 10px; font-weight: 600;">
                                             </div>

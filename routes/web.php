@@ -14,6 +14,7 @@ use App\Http\Controllers\Website\DiscountsController;
 use App\Http\Controllers\Website\EvaluationController;
 use App\Http\Controllers\Dashboard\FaqsController;
 use App\Http\Controllers\Dashboard\PrivacyQuestionController;
+use App\Http\Controllers\Dashboard\SliderController;
 use App\Http\Controllers\Website\FaqsController as WebsiteFaqsController;
 use App\Http\Controllers\Website\FavoriteController;
 use App\Http\Controllers\Website\FollowersController;
@@ -74,13 +75,15 @@ Route::get('/advertisement/create',[AdvertisementController::class,'create'])->n
 Route::post('/advertisement/create',[AdvertisementController::class,'store'])->name('store.ads');
 
 Route::get('/advertisement/addDetails',[AdvertisementController::class,'addDetails'])->name('create_details_ads');
-Route::get('show/advertisement',[AdvertisementController::class,'show'])->name('advertisement.show');
-Route::get('select-category',[AdvertisementController::class,'selectCategory'])->name('select_category');
-Route::get('advers/privacy',[AdvertisementController::class,'addPrivacy'])->name('privacy');
-Route::get('advertisement/best',[AdvertisementController::class,'best_advers'])->name('best_advers');
+Route::get('show/advertisement/{id}',[AdvertisementController::class,'show'])->name('advertisement.show');
+Route::get('select-category',[AdvertisementController::class,'selectCategory'])->name('select_category')->middleware('auth');
+Route::get('advers/privacy',[AdvertisementController::class,'addPrivacy'])->name('privacy')->middleware('auth');
+Route::get('advertisement/best',[AdvertisementController::class,'best_advers'])->name('best_advers')->middleware('auth');
 
 
 
+Route::post('slider/store',[SliderController::class,'store'])->name('slider.store');
+Route::delete('slider/{id}',[SliderController::class,'destroy'])->name('slider.destroy');
 
 
 
@@ -96,7 +99,7 @@ Route::get('/register',[AuthController::class,'registerForm'])->name('register')
 Route::get('/forget',[AuthController::class,'forget']);
 Route::get('/add-code',[AuthController::class,'addCode']);
 Route::get('/new-password',[AuthController::class,'newPassword']);
-Route::get('/profile',[ProfileController::class,'index'])->name('profile');
+Route::get('/profile',[ProfileController::class,'index'])->name('profile')->middleware('auth');
 
 
 
@@ -153,7 +156,7 @@ Route::get('/dashboard/{segment}',[DashboardController::class,'home'])->name('da
 
 
 
-
+Route::post('logout',[AuthController::class,'logout'])->name('logout');
 
 
 Route::get('test',function(){
