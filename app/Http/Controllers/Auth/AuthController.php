@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegistrationRequest;
+use App\Models\Notification;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -44,13 +45,20 @@ class AuthController extends Controller
     public function register(RegistrationRequest $request)
 {
 
-    User::create([
+  $user=   User::create([
         'first_name' => $request->first_name,
         'last_name' => $request->last_name,
         'email' => $request->email,
         'password' => bcrypt($request->password),
         'phone_number' => $request->phone_number,
         'country' => $request->country,
+    ]);
+
+
+    Notification::create([
+        'title' => 'تم تسجيل بنجاح ',
+        'user_id' => $user->id,
+        'link' => route('profile'),
     ]);
 
     return redirect()->route('login')->with('success', 'Registration successful! You can now log in.');
@@ -74,6 +82,7 @@ public function login(Request $request)
             return redirect()->route('home');
         }
     }
+
 
     // Authentication failed
     return redirect()->route('login')->with('error', 'Invalid credentials. Please try again.');

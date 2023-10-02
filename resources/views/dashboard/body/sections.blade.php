@@ -39,9 +39,9 @@
                 @foreach ($sections as $section)
                 <div class="all-buutton2" style="height: 200px;">
                     <div>
-                     <button type="button" class="btn btn-primary btn-lg btn-add">{{ $section->title }}</button>
+                     {{-- <button type="button" class="btn btn-primary btn-lg btn-add">{{ $section->title }}</button> --}}
+                     <h4 style="padding-right: 30px; padding-top: 6px;">{{ $section->title }}</h4>
                      <button type="button" class="btn btn-primary btn-lg btn-edit" data-toggle="modal" data-target="#editSectionModal" data-section-title="{{ $section->title }}">تعديل القسم</button>
-
                      <div class="modal fade" id="editSectionModal" tabindex="-1" role="dialog" aria-labelledby="editSectionModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">

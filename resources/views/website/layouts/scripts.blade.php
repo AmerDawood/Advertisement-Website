@@ -11,6 +11,20 @@
 <script src="{{ asset('website/assets/js/main.js') }}"></script>
 <script src="{{ asset('website/assets/js/cdn.jsdelivr.net_npm_select2@4.1.0-rc.0_dist_js_select2.min.js') }}"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+@if (session('msg'))
+<script>
+    Swal.fire(
+    'تمت العملية بنجاح !',
+    '{{ session("msg") }}',
+    'success'
+    )
+</script>
+@endif
 
 
 @yield('scripts')

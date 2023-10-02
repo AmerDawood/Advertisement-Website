@@ -81,6 +81,11 @@
 
                                                 </div> --}}
                                             </div>
+
+                                            <input type="text" hidden name="section_id" value="{{ $section_id->id  }}" id="">
+
+
+                                            {{-- {{ $section_id->id }} --}}
                                             <div class="form-group row  my-4">
                                                 <div class="col-12 col-lg-12">
                                                     <input class="  form-control" id="" type="tel"

@@ -3,18 +3,22 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Models\Notification;
 use App\Models\Product;
 use App\Models\Section;
 use Illuminate\Http\Request;
 
 class AdvertisementController extends Controller
 {
-    public function create(){
+    public function create($id){
         $sections = Section::all();
-        return view('website.advertisements.create',compact('sections'));
+        $section_id = Section::findOrFail($id);
+
+        return view('website.advertisements.create',compact('sections','section_id'));
     }
 
     public function store(Request $request){
+
         $request->validate([
             'title' => 'required',
             'description' => 'required',
@@ -22,14 +26,15 @@ class AdvertisementController extends Controller
             'image' => 'required',
             'location' => 'required',
             'phone' => 'required',
-            'user_id' =>'required'
+            'user_id' =>'required',
+            'section_id' =>'required',
 
         ]);
 
         $img_name = rand() . time() . $request->file('image')->getClientOriginalExtension();
         $request->file('image')->move(public_path('uploads/advertisements'), $img_name);
 
-        Product::create([
+      $product =   Product::create([
             'title' => $request->title,
             'description' =>  $request->description,
             'image' => $img_name,
@@ -37,7 +42,16 @@ class AdvertisementController extends Controller
             'price' => $request->price,
             'phone' =>$request->phone,
             'user_id' => $request->user_id,
+            'section_id' =>$request->section_id,
 
+        ]);
+        $productId = $product->id;
+
+
+        Notification::create([
+            'title' => 'تما اضافة المنتج بنجاح',
+            'user_id' => auth()->user()->id,
+            'link' => route('advertisement.show', ['id' => $productId]),
         ]);
 
         return redirect()->route('home')->with('msg', 'Advertisement Created Successfully')->with('type', 'success');
@@ -89,5 +103,18 @@ class AdvertisementController extends Controller
         $sections = Section::all();
 
         return view('website.advertisements.best_advers',compact('sections'));
+    }
+
+
+
+
+
+    public function productSections($id)
+    {
+        $sections = Section::all();
+          $products = Product::where('section_id' ,$id)->orderByDesc('id')->get();
+
+          return view('website.advertisements.advers_sections',compact('products','sections'));
+
     }
 }

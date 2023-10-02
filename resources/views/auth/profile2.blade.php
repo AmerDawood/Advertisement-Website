@@ -51,7 +51,7 @@
                 </div>
                 <div class="profile-img">
                     <div class="image">
-                        <img src="assets/images/Ellipse 30.png" alt="">
+                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" style="border-radius: 160px;" alt="">
                         <div class="green-dot bg-gradient"></div>
                     </div>
                 </div>

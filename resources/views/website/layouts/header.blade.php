@@ -9,7 +9,9 @@
 
 
                             @foreach ($sections as $section)
-                            <li><a href="#0" class="cha-header__nav-link">{{$section->title}}</a></li>
+
+
+                            <li><a href="{{ route('produc.sections',$section->id) }}" class="cha-header__nav-link">{{$section->title}}</a></li>
 
                             @endforeach
                         </ul>
@@ -79,7 +81,12 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('profile') }}" class="cha-header__nav-link"> <span>12504</span>عضو
+                                <a href="{{ route('profile') }}" class="cha-header__nav-link"> <span>
+
+                                    @if(Auth::check())
+                                    {{ auth()->user()->id }}
+                                    @endif
+                                </span>عضو
                                     <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path

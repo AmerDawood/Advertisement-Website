@@ -5,177 +5,689 @@
 
 
 @section('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+<!-- bootstrap -->
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+<!-- style -->
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
 @endsection
 
 @section('content')
 <!-- **************** -->
+<section id="chats" class="en-reg" style="padding-top: 150px;">
+    <!-- chat in large screen -->
+    <div class="large-chat d-flex align-items-start">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                aria-labelledby="v-pills-home-tab" tabindex="0">
 
-<div style="width: 1440px; height: 1276px; position: relative; background: white">
 
-
-
-
-    <div style="width: 229.88px; height: 35.16px; left: 615px; top: 459px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex">
-      <div style="padding-left: 6.96px; padding-right: 6.96px; padding-top: 3.48px; padding-bottom: 3.48px; background: #545F71; border-radius: 5.22px; justify-content: flex-start; align-items: center; display: flex">
-        <div style="align-self: stretch; transform: rotate(180deg); transform-origin: 0 0; flex-direction: column; justify-content: center; align-items: flex-end; gap: 3.48px; display: inline-flex">
-          <div style="transform: rotate(180deg); transform-origin: 0 0; justify-content: flex-start; align-items: flex-start; gap: 6.96px; display: inline-flex">
-            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8.70px; display: inline-flex">
-              <div style="color: white; font-size: 14px; font-family: Eloquia Text; font-weight: 400; line-height: 20px; word-wrap: break-word">Anyone on for lunch today</div>
-              <div style="align-self: stretch; height: 0.87px; background: #545F71"></div>
-            </div>
-            <div style="width: 58.31px; align-self: stretch; justify-content: flex-start; align-items: flex-end; gap: 3.48px; display: flex">
-              <div style="justify-content: center; align-items: center; gap: 3.48px; display: flex">
-                <div style="color: white; font-size: 10.44px; font-family: Eloquia Text; font-weight: 400; word-wrap: break-word">11:31 AM</div>
-                <div style="width: 13.93px; height: 6.96px; position: relative">
-                  <div style="width: 13.93px; height: 6.96px; left: 0px; top: 0px; position: absolute">
-                    <div style="width: 9.40px; height: 6.63px; left: -0px; top: 0.34px; position: absolute; transform: rotate(-2.06deg); transform-origin: 0 0; border: 0.87px #81E299 solid"></div>
-                    <div style="width: 8.65px; height: 6.63px; left: 5.06px; top: 0.31px; position: absolute; transform: rotate(-2.06deg); transform-origin: 0 0; border: 0.87px #81E299 solid"></div>
-                  </div>
+                <div class="chat-title d-flex justify-content-between align-items-center p-2">
+                    <a href="#" class="call">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="en-bold text-dark">Abdallah</span>
+                        <div class="chat-img">
+                            <img src="assets/images/__avatar_url.png" class="object-fit-cover" width="50px"
+                                height="50px" alt="">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="width: 229.88px; height: 35.16px; left: 615px; top: 607px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex">
-      <div style="padding-left: 6.96px; padding-right: 6.96px; padding-top: 3.48px; padding-bottom: 3.48px; background: #545F71; border-radius: 5.22px; justify-content: flex-start; align-items: center; display: flex">
-        <div style="align-self: stretch; transform: rotate(180deg); transform-origin: 0 0; flex-direction: column; justify-content: center; align-items: flex-end; gap: 3.48px; display: inline-flex">
-          <div style="transform: rotate(180deg); transform-origin: 0 0; justify-content: flex-start; align-items: flex-start; gap: 6.96px; display: inline-flex">
-            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8.70px; display: inline-flex">
-              <div style="color: white; font-size: 14px; font-family: Eloquia Text; font-weight: 400; line-height: 20px; word-wrap: break-word">Anyone on for lunch today</div>
-              <div style="align-self: stretch; height: 0.87px; background: #545F71"></div>
-            </div>
-            <div style="width: 58.31px; align-self: stretch; justify-content: flex-start; align-items: flex-end; gap: 3.48px; display: flex">
-              <div style="justify-content: center; align-items: center; gap: 3.48px; display: flex">
-                <div style="color: white; font-size: 10.44px; font-family: Eloquia Text; font-weight: 400; word-wrap: break-word">11:31 AM</div>
-                <div style="width: 13.93px; height: 6.96px; position: relative">
-                  <div style="width: 13.93px; height: 6.96px; left: 0px; top: 0px; position: absolute">
-                    <div style="width: 9.40px; height: 6.63px; left: -0px; top: 0.34px; position: absolute; transform: rotate(-2.06deg); transform-origin: 0 0; border: 0.87px #81E299 solid"></div>
-                    <div style="width: 8.65px; height: 6.63px; left: 5.06px; top: 0.31px; position: absolute; transform: rotate(-2.06deg); transform-origin: 0 0; border: 0.87px #81E299 solid"></div>
-                  </div>
+                <div class="chat-content ">
+                    <div class="messages d-flex flex-column gap-2 p-4">
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi anyone here !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-form">
+                        <form action="" class="rounded-5">
+                            <textarea class="form-control rounded-5 text-dark reg" placeholder="اكتب رسالتك" name="" id="" cols="" rows="2"></textarea>
+                            <button type="submit" class="btn text-secondary fs-4 rounded-5"><i
+                                    class="fa-regular fa-circle-left"></i></button>
+                        </form>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="width: 229.88px; height: 35.16px; left: 1121px; top: 537px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex">
-      <div style="padding-left: 6.96px; padding-right: 6.96px; padding-top: 3.48px; padding-bottom: 3.48px; background: #007AFF; border-radius: 5.22px; justify-content: flex-start; align-items: center; display: flex">
-        <div style="align-self: stretch; transform: rotate(180deg); transform-origin: 0 0; flex-direction: column; justify-content: center; align-items: flex-end; gap: 3.48px; display: inline-flex">
-          <div style="transform: rotate(180deg); transform-origin: 0 0; justify-content: flex-start; align-items: flex-start; gap: 6.96px; display: inline-flex">
-            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8.70px; display: inline-flex">
-              <div style="color: white; font-size: 14px; font-family: Eloquia Text; font-weight: 400; line-height: 20px; word-wrap: break-word">Anyone on for lunch today</div>
-              <div style="align-self: stretch; height: 0.87px; background: #007AFF"></div>
-            </div>
-            <div style="width: 58.31px; align-self: stretch; justify-content: flex-start; align-items: flex-end; gap: 3.48px; display: flex">
-              <div style="justify-content: center; align-items: center; gap: 3.48px; display: flex">
-                <div style="color: white; font-size: 10.44px; font-family: Eloquia Text; font-weight: 400; word-wrap: break-word">11:31 AM</div>
-                <div style="width: 13.93px; height: 6.96px; position: relative">
-                  <div style="width: 13.93px; height: 6.96px; left: 0px; top: 0px; position: absolute">
-                    <div style="width: 9.40px; height: 6.63px; left: -0px; top: 0.34px; position: absolute; transform: rotate(-2.06deg); transform-origin: 0 0; border: 0.87px #81E299 solid"></div>
-                    <div style="width: 8.65px; height: 6.63px; left: 5.06px; top: 0.31px; position: absolute; transform: rotate(-2.06deg); transform-origin: 0 0; border: 0.87px #81E299 solid"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="width: 229.88px; height: 35.16px; left: 1121px; top: 675px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex">
-      <div style="padding-left: 6.96px; padding-right: 6.96px; padding-top: 3.48px; padding-bottom: 3.48px; background: #007AFF; border-radius: 5.22px; justify-content: flex-start; align-items: center; display: flex">
-        <div style="align-self: stretch; transform: rotate(180deg); transform-origin: 0 0; flex-direction: column; justify-content: center; align-items: flex-end; gap: 3.48px; display: inline-flex">
-          <div style="transform: rotate(180deg); transform-origin: 0 0; justify-content: flex-start; align-items: flex-start; gap: 6.96px; display: inline-flex">
-            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8.70px; display: inline-flex">
-              <div style="color: white; font-size: 14px; font-family: Eloquia Text; font-weight: 400; line-height: 20px; word-wrap: break-word">Anyone on for lunch today</div>
-              <div style="align-self: stretch; height: 0.87px; background: #007AFF"></div>
-            </div>
-            <div style="width: 58.31px; align-self: stretch; justify-content: flex-start; align-items: flex-end; gap: 3.48px; display: flex">
-              <div style="justify-content: center; align-items: center; gap: 3.48px; display: flex">
-                <div style="color: white; font-size: 10.44px; font-family: Eloquia Text; font-weight: 400; word-wrap: break-word">11:31 AM</div>
-                <div style="width: 13.93px; height: 6.96px; position: relative">
-                  <div style="width: 13.93px; height: 6.96px; left: 0px; top: 0px; position: absolute">
-                    <div style="width: 9.40px; height: 6.63px; left: -0px; top: 0.34px; position: absolute; transform: rotate(-2.06deg); transform-origin: 0 0; border: 0.87px #81E299 solid"></div>
-                    <div style="width: 8.65px; height: 6.63px; left: 5.06px; top: 0.31px; position: absolute; transform: rotate(-2.06deg); transform-origin: 0 0; border: 0.87px #81E299 solid"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="width: 639px; height: 42px; left: 697px; top: 790px; position: absolute; background: rgba(255, 255, 255, 0.95); border-radius: 20px"></div>
-    <div style="left: 1189px; top: 802px; position: absolute; color: rgba(12.36, 57.10, 109.62, 0.60); font-size: 14px; font-family: Inter; font-weight: 300; word-wrap: break-word">اكتب رسالتك</div>
-    <div style="width: 878px; height: 65px; left: 562px; top: 170px; position: absolute; background: #D9D9D9"></div>
-    <img style="width: 51px; height: 52px; left: 585px; top: 177px; position: absolute; border-radius: 174.07px; border: 1.74px rgba(30, 30, 30, 0.10) solid" src="https://via.placeholder.com/51x52" />
-    <div style="width: 116px; height: 24px; left: 654px; top: 191px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Kiro Nagy</div>
-    <div style="width: 27.63px; height: 27px; left: 1383px; top: 189px; position: absolute">
-      <div style="width: 27.63px; height: 27px; left: 0px; top: 0px; position: absolute; background: #00823C; border-radius: 33px"></div>
-      <div style="width: 16.33px; height: 15.70px; left: 5.65px; top: 5.65px; position: absolute; background: white"></div>
-    </div>
-    <div style="width: 14px; height: 14px; left: 622px; top: 218px; position: absolute; background: #00823C; border-radius: 9999px"></div>
-    <div style="width: 562px; height: 167px; left: 0px; top: 170px; position: absolute">
-      <div style="width: 562px; height: 167px; left: 0px; top: 0px; position: absolute; background: #DCDCDC"></div>
-      <img style="width: 81px; height: 82px; left: 24px; top: 33px; position: absolute; border-radius: 174.07px; border: 1.74px rgba(30, 30, 30, 0.10) solid" src="https://via.placeholder.com/81x82" />
-      <div style="width: 18px; height: 18px; left: 81px; top: 98px; position: absolute; background: #00823C; border-radius: 9999px"></div>
-      <div style="width: 168px; height: 24px; left: 132px; top: 40px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Abdallh Elzayat</div>
-      <div style="width: 86px; height: 24px; left: 459px; top: 133px; position: absolute; color: rgba(0, 0, 0, 0.60); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">last seen 5h</div>
-      <div style="width: 272px; left: 132px; top: 76px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Loream Text For Lream Text Loream Text For Lream Text</div>
-    </div>
-    <div style="width: 562px; height: 167px; left: 0px; top: 344px; position: absolute">
-      <div style="width: 562px; height: 167px; left: 0px; top: 0px; position: absolute; background: #F0F0F0"></div>
-      <img style="width: 81px; height: 82px; left: 24px; top: 33px; position: absolute; border-radius: 174.07px; border: 1.74px rgba(30, 30, 30, 0.10) solid" src="https://via.placeholder.com/81x82" />
-      <div style="width: 18px; height: 18px; left: 81px; top: 98px; position: absolute; background: #00823C; border-radius: 9999px"></div>
-      <div style="width: 116px; height: 24px; left: 132px; top: 40px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Kiro Nagy</div>
-      <div style="width: 86px; height: 24px; left: 459px; top: 133px; position: absolute; color: rgba(0, 0, 0, 0.60); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">last seen 5h</div>
-      <div style="width: 272px; left: 132px; top: 76px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Loream Text For Lream Text Loream Text For Lream Text</div>
-    </div>
-    <div style="width: 562px; height: 167px; left: 0px; top: 518px; position: absolute">
-      <div style="width: 562px; height: 167px; left: 0px; top: 0px; position: absolute; background: #F0F0F0"></div>
-      <img style="width: 81px; height: 82px; left: 24px; top: 33px; position: absolute; border-radius: 174.07px; border: 1.74px rgba(30, 30, 30, 0.10) solid" src="https://via.placeholder.com/81x82" />
-      <div style="width: 18px; height: 18px; left: 81px; top: 98px; position: absolute; background: #00823C; border-radius: 9999px"></div>
-      <div style="width: 198px; height: 24px; left: 132px; top: 40px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Abdallh Elzayat</div>
-      <div style="width: 86px; height: 24px; left: 459px; top: 133px; position: absolute; color: rgba(0, 0, 0, 0.60); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">last seen 5h</div>
-      <div style="width: 272px; left: 132px; top: 76px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Loream Text For Lream Text Loream Text For Lream Text</div>
-    </div>
-    <div style="width: 562px; height: 167px; left: 0px; top: 692px; position: absolute">
-      <div style="width: 562px; height: 167px; left: 0px; top: 0px; position: absolute; background: #F0F0F0"></div>
-      <img style="width: 81px; height: 82px; left: 24px; top: 33px; position: absolute; border-radius: 174.07px; border: 1.74px rgba(30, 30, 30, 0.10) solid" src="https://via.placeholder.com/81x82" />
-      <div style="width: 18px; height: 18px; left: 81px; top: 98px; position: absolute; background: #00823C; border-radius: 9999px"></div>
-      <div style="width: 116px; height: 24px; left: 132px; top: 40px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Kiro Nagy</div>
-      <div style="width: 86px; height: 24px; left: 459px; top: 133px; position: absolute; color: rgba(0, 0, 0, 0.60); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">last seen 5h</div>
-      <div style="width: 272px; left: 132px; top: 76px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Loream Text For Lream Text Loream Text For Lream Text</div>
-    </div>
-    <div style="width: 562px; height: 167px; left: 0px; top: 871px; position: absolute">
-      <div style="width: 562px; height: 167px; left: 0px; top: 0px; position: absolute; background: #F0F0F0"></div>
-      <img style="width: 81px; height: 82px; left: 24px; top: 33px; position: absolute; border-radius: 174.07px; border: 1.74px rgba(30, 30, 30, 0.10) solid" src="https://via.placeholder.com/81x82" />
-      <div style="width: 18px; height: 18px; left: 81px; top: 98px; position: absolute; background: #00823C; border-radius: 9999px"></div>
-      <div style="width: 158px; height: 24px; left: 132px; top: 40px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Abdallh Elzayat</div>
-      <div style="width: 86px; height: 24px; left: 459px; top: 133px; position: absolute; color: rgba(0, 0, 0, 0.60); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">last seen 5h</div>
-      <div style="width: 272px; left: 132px; top: 76px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Loream Text For Lream Text Loream Text For Lream Text</div>
-    </div>
-    <div style="width: 562px; height: 167px; left: 0px; top: 1054px; position: absolute">
-      <div style="width: 562px; height: 167px; left: 0px; top: 0px; position: absolute; background: #F0F0F0"></div>
-      <img style="width: 81px; height: 82px; left: 24px; top: 33px; position: absolute; border-radius: 174.07px; border: 1.74px rgba(30, 30, 30, 0.10) solid" src="https://via.placeholder.com/81x82" />
-      <div style="width: 18px; height: 18px; left: 81px; top: 98px; position: absolute; background: #00823C; border-radius: 9999px"></div>
-      <div style="width: 116px; height: 24px; left: 132px; top: 40px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Kiro Nagy</div>
-      <div style="width: 86px; height: 24px; left: 459px; top: 133px; position: absolute; color: rgba(0, 0, 0, 0.60); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">last seen 5h</div>
-      <div style="width: 272px; left: 132px; top: 76px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 15px; font-family: Inter; font-weight: 400; line-height: 15.67px; word-wrap: break-word">Loream Text For Lream Text Loream Text For Lream Text</div>
-    </div>
-    <div style="width: 8px; height: 325px; left: 575px; top: 252px; position: absolute; background: #D9D9D9; border-radius: 50px"></div>
-    <div style="width: 4px; height: 48px; left: 577px; top: 255px; position: absolute; background: rgba(68, 68, 68, 0.50); border-radius: 20px"></div>
-  </div>
 
 
 
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+                tabindex="0">
+
+
+                <div class="chat-title d-flex justify-content-between align-items-center p-2">
+                    <a href="#" class="call">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="en-bold text-dark">Abdallah</span>
+                        <div class="chat-img">
+                            <img src="assets/images/__avatar_url.png" class="object-fit-cover" width="50px"
+                                height="50px" alt="">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content ">
+                    <div class="messages d-flex flex-column gap-2 p-4">
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi anyone here !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-form">
+                        <form action="" class="rounded-5">
+                            <textarea class="form-control rounded-5 text-dark reg" placeholder="اكتب رسالتك" name="" id="" cols="" rows="2"></textarea>
+                            <button type="submit" class="btn text-secondary fs-4 rounded-5"><i
+                                    class="fa-regular fa-circle-left"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+                tabindex="0">
+
+
+                <div class="chat-title d-flex justify-content-between align-items-center p-2">
+                    <a href="#" class="call">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="en-bold text-dark">Abdallah</span>
+                        <div class="chat-img">
+                            <img src="assets/images/__avatar_url.png" class="object-fit-cover" width="50px"
+                                height="50px" alt="">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content ">
+                    <div class="messages d-flex flex-column gap-2 p-4">
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi anyone here !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-form">
+                        <form action="" class="rounded-5">
+                            <textarea class="form-control rounded-5 text-dark reg" placeholder="اكتب رسالتك" name="" id="" cols="" rows="2"></textarea>
+                            <button type="submit" class="btn text-secondary fs-4 rounded-5"><i
+                                    class="fa-regular fa-circle-left"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                tabindex="0">
+
+
+                <div class="chat-title d-flex justify-content-between align-items-center p-2">
+                    <a href="#" class="call">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="en-bold text-dark">Abdallah</span>
+                        <div class="chat-img">
+                            <img src="assets/images/__avatar_url.png" class="object-fit-cover" width="50px"
+                                height="50px" alt="">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content ">
+                    <div class="messages d-flex flex-column gap-2 p-4">
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi anyone here !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-form">
+                        <form action="" class="rounded-5">
+                            <textarea class="form-control rounded-5 text-dark reg" placeholder="اكتب رسالتك" name="" id="" cols="" rows="2"></textarea>
+                            <button type="submit" class="btn text-secondary fs-4 rounded-5"><i
+                                    class="fa-regular fa-circle-left"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                tabindex="0">
+
+
+                <div class="chat-title d-flex justify-content-between align-items-center p-2">
+                    <a href="#" class="call">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="en-bold text-dark">Abdallah</span>
+                        <div class="chat-img">
+                            <img src="assets/images/__avatar_url.png" class="object-fit-cover" width="50px"
+                                height="50px" alt="">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content ">
+                    <div class="messages d-flex flex-column gap-2 p-4">
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi anyone here !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-form">
+                        <form action="" class="rounded-5">
+                            <textarea class="form-control rounded-5 text-dark reg" placeholder="اكتب رسالتك" name="" id="" cols="" rows="2"></textarea>
+                            <button type="submit" class="btn text-secondary fs-4 rounded-5"><i
+                                    class="fa-regular fa-circle-left"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+        <div class="vh-100 overflow-y-auto overflow-x-hidden res-pills" style="width: 30%;">
+            <div class="nav flex-column flex-wrap gap-1 nav-pills  en-reg" id="v-pills-tab" role="tablist"
+                aria-orientation="vertical">
+                <button class="nav-link active text-start py-3" id="v-pills-home-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                    aria-selected="true">
+
+                    <div class="user d-flex gap-3 align-items-center mb-2">
+                        <div class="username">
+                            <span class=" d-block text-dark en-bold ">Abdallah</span>
+                            <span class="text-secondary" style="font-size: 14px;">Lorem ipsum dolor sit, amet
+                                consectetur adipisicing.</span>
+                        </div>
+
+                        <div class="self-img">
+                            <img src="assets/images/__avatar_url.png" alt="" width="70" height="70">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                    <p class="mb-0 text-end en-reg text-secondary" style="font-size: 12px;">Last seen 5 min ago</p>
+
+
+                </button>
+                <button class="nav-link text-start py-3" id="v-pills-profile-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                    aria-selected="false">
+
+                    <div class="user d-flex gap-3 align-items-center mb-2">
+                        <div class="username">
+                            <span class=" d-block text-dark en-bold ">Abdallah</span>
+                            <span class="text-secondary" style="font-size: 14px;">Lorem ipsum dolor sit, amet
+                                consectetur adipisicing.</span>
+                        </div>
+
+                        <div class="self-img">
+                            <img src="assets/images/__avatar_url.png" alt="" width="70" height="70">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                    <p class="mb-0 text-end en-reg text-secondary" style="font-size: 12px;">Last seen 5 min ago</p>
+
+
+                </button>
+                <button class="nav-link text-start py-3" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                    aria-selected="false">
+
+                    <div class="user d-flex gap-3 align-items-center mb-2">
+                        <div class="username">
+                            <span class=" d-block text-dark en-bold ">Abdallah</span>
+                            <span class="text-secondary" style="font-size: 14px;">Lorem ipsum dolor sit, amet
+                                consectetur adipisicing.</span>
+                        </div>
+
+                        <div class="self-img">
+                            <img src="assets/images/__avatar_url.png" alt="" width="70" height="70">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                    <p class="mb-0 text-end en-reg text-secondary" style="font-size: 12px;">Last seen 5 min ago</p>
+
+
+                </button>
+                <button class="nav-link text-start py-3" id="v-pills-messages-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                    aria-selected="false">
+
+                    <div class="user d-flex gap-3 align-items-center mb-2">
+                        <div class="username">
+                            <span class=" d-block text-dark en-bold ">Abdallah</span>
+                            <span class="text-secondary" style="font-size: 14px;">Lorem ipsum dolor sit, amet
+                                consectetur adipisicing.</span>
+                        </div>
+
+                        <div class="self-img">
+                            <img src="assets/images/__avatar_url.png" alt="" width="70" height="70">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                    <p class="mb-0 text-end en-reg text-secondary" style="font-size: 12px;">Last seen 5 min ago</p>
+
+
+                </button>
+                <button class="nav-link text-start py-3" id="v-pills-settings-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                    aria-selected="false">
+
+                    <div class="user d-flex gap-3 align-items-center mb-2">
+                        <div class="username">
+                            <span class=" d-block text-dark en-bold ">Abdallah</span>
+                            <span class="text-secondary" style="font-size: 14px;">Lorem ipsum dolor sit, amet
+                                consectetur adipisicing.</span>
+                        </div>
+
+                        <div class="self-img">
+                            <img src="assets/images/__avatar_url.png" alt="" width="70" height="70">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                    </div>
+                    <p class="mb-0 text-end en-reg text-secondary" style="font-size: 12px;">Last seen 5 min ago</p>
+
+
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- chat in small screen -->
+    <div class="responsive-chats">
+        <div class="chat-nav d-flex justify-content-between align-items-center px-3 bg-gradient">
+            <h1 class="logo fs-5 text-white en-bold">LOGO</h1>
+            <span class="text-white fs-5"><i class="fa-solid fa-align-left"></i></span>
+        </div>
+        <div class="buttons w-100 d-flex flex-column gap-2">
+            <a href="#chat-1" class="btn w-100">
+
+                <div class="user d-flex gap-3 align-items-center justify-content-end mb-2">
+                    <div class="username text-start">
+                        <span class=" d-block text-dark en-bold ">Abdallah</span>
+                        <span class="text-secondary" style="font-size: 14px;">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing.</span>
+                    </div>
+
+                    <div class="self-img position-relative">
+                        <img src="assets/images/__avatar_url.png" alt="" width="70" height="70">
+                        <div class="green-dot bg-gradient"></div>
+                    </div>
+                </div>
+                <p class="mb-0 text-end en-reg text-secondary" style="font-size: 12px;">Last seen 5 min ago</p>
+
+            </a>
+            <a href="#chat-1" class="btn w-100">
+
+                <div class="user d-flex gap-3 align-items-center justify-content-end mb-2">
+                    <div class="username text-start">
+                        <span class=" d-block text-dark en-bold ">Abdallah</span>
+                        <span class="text-secondary" style="font-size: 14px;">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing.</span>
+                    </div>
+
+                    <div class="self-img position-relative">
+                        <img src="assets/images/__avatar_url.png" alt="" width="70" height="70">
+                        <div class="green-dot bg-gradient"></div>
+                    </div>
+                </div>
+                <p class="mb-0 text-end en-reg text-secondary" style="font-size: 12px;">Last seen 5 min ago</p>
+
+            </a>
+            <a href="#chat-1" class="btn w-100">
+
+                <div class="user d-flex gap-3 align-items-center justify-content-end mb-2">
+                    <div class="username text-start">
+                        <span class=" d-block text-dark en-bold ">Abdallah</span>
+                        <span class="text-secondary" style="font-size: 14px;">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing.</span>
+                    </div>
+
+                    <div class="self-img position-relative">
+                        <img src="assets/images/__avatar_url.png" alt="" width="70" height="70">
+                        <div class="green-dot bg-gradient"></div>
+                    </div>
+                </div>
+                <p class="mb-0 text-end en-reg text-secondary" style="font-size: 12px;">Last seen 5 min ago</p>
+
+            </a>
+        </div>
+        <div class="res-chat">
+            <div id="chat-1">
+                <div class="chat-title d-flex justify-content-between align-items-center p-2">
+                    <a href="#" class="call">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <div class="d-flex gap-2 align-items-center">
+                        <span class="en-bold text-dark">Abdallah</span>
+                        <div class="chat-img">
+                            <img src="assets/images/__avatar_url.png" class="object-fit-cover" width="50px"
+                                height="50px" alt="">
+                            <div class="green-dot bg-gradient"></div>
+                        </div>
+                        <span class="back fs-5"><i class="fa-solid fa-arrow-left"></i></span>
+                    </div>
+                </div>
+                <div class="chat-content ">
+                    <div class="messages d-flex flex-column gap-2 p-4">
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <div class="message-content send py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi anyone here !</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="message-content reseve py-2 px-3 rounded-2">
+                                <p class="text-white">hi hi aaaaaaaaaaa!</p>
+                                <span class="text-white mt-2 d-flex justify-content-start"
+                                    style="font-size: 12px;"><i class="fa-solid fa-check-double"></i>11:55 AM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-form">
+                        <form action="" class="rounded-5">
+                            <textarea class="form-control rounded-5 text-dark reg" placeholder="اكتب رسالتك" name="" id="" cols="" rows="2"></textarea>
+                            <button type="submit" class="btn text-secondary fs-4 rounded-5"><i
+                                    class="fa-regular fa-circle-left"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</section>
 
 @endsection
 
 
 @section('scripts')
+   <!-- fontawesome -->
+   <script src="{{ asset('assets/js/all.min.js') }}"></script>
+   <!-- bootstrap -->
+   <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+   <!-- custom js -->
+   <script src="{{ asset('assets/js/custom.js') }}"></script>
 
 @endsection

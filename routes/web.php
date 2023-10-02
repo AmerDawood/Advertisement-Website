@@ -71,7 +71,7 @@ Route::put('/privacy/{id}', [PrivacyQuestionController::class,'update'])->name('
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 
-Route::get('/advertisement/create',[AdvertisementController::class,'create'])->name('create_ads');
+Route::get('/advertisement/create/{id}',[AdvertisementController::class,'create'])->name('create_ads');
 Route::post('/advertisement/create',[AdvertisementController::class,'store'])->name('store.ads');
 
 Route::get('/advertisement/addDetails',[AdvertisementController::class,'addDetails'])->name('create_details_ads');
@@ -79,6 +79,9 @@ Route::get('show/advertisement/{id}',[AdvertisementController::class,'show'])->n
 Route::get('select-category',[AdvertisementController::class,'selectCategory'])->name('select_category')->middleware('auth');
 Route::get('advers/privacy',[AdvertisementController::class,'addPrivacy'])->name('privacy')->middleware('auth');
 Route::get('advertisement/best',[AdvertisementController::class,'best_advers'])->name('best_advers')->middleware('auth');
+
+
+Route::get('advertisement/sections/{id}',[AdvertisementController::class,'productSections'])->name('produc.sections');
 
 
 
@@ -126,12 +129,30 @@ Route::get('evaluation' , [EvaluationController::class ,'index'])->name('evaluat
 
 
 Route::resource('contacts', ContactController::class);
-Route::resource('followers', FollowersController::class);
-Route::resource('notifications', NotificationsController::class);
-Route::resource('favorites', FavoriteController::class);
+Route::resource('followers', FollowersController::class)->middleware('auth');
+Route::resource('notifications', NotificationsController::class)->middleware('auth');
 
-Route::get('settings/notifications',[NotificationsController::class,'settings'])->name('settings.notifications');
+Route::resource('favorites', FavoriteController::class)->middleware('auth');
+Route::post('/favorites/delete', [FavoriteController::class,'delete'])
+    ->name('favorites.delete')->middleware('auth');
 
+
+Route::get('settings/notifications',[NotificationsController::class,'settings'])->name('settings.notifications')->middleware('auth');
+Route::get('/delete-notification/{id}', [NotificationsController::class,'deleteNotificationById'])
+    ->name('notifications.deleteById')->middleware('auth');
+
+
+    Route::get('/delete-all-notifications', [NotificationsController::class,'deleteAllNotifications'])
+    ->name('notifications.deleteAll');
+
+
+
+
+
+    Route::get('user/profile/{id}',[FollowersController::class,'user_profile'])->name('user.profile');
+
+
+    Route::post('follower',[FollowersController::class,'store'])->name('follower.store');
 
 
 Route::resource('chat', ChatController::class);

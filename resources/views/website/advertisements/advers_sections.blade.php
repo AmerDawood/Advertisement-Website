@@ -1,8 +1,12 @@
 @extends('website.master')
 
 
+@section('styles')
+
+@endsection
 
 @section('content')
+
 <section class="main-content">
     <div class="row justify-content-center">
 
@@ -10,7 +14,7 @@
             <div class="container">
                 <div class="row ">
                     <div class="col-details   col-12 ">
-                        <div class="box">
+                        {{-- <div class="box">
                             <div class="img">
                                 <img src="{{ asset('uploads/advertisements/'.$product->image) }}" alt="">
 
@@ -21,20 +25,13 @@
                                     <h5>{{ $product->price }} ريال </h4>
                                 </div>
                                 <ul>
-                                    <li>
-
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                    <li><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M14.2931 2.77492C13.457 1.87215 12.2891 1.375 11 1.375C9.70406 1.375 8.53231 1.86914 7.7 2.76633C6.85867 3.6734 6.44875 4.90617 6.545 6.23734C6.73578 8.86359 8.73426 11 11 11C13.2657 11 15.2608 8.86402 15.4546 6.2382C15.5521 4.91906 15.1396 3.68887 14.2931 2.77492ZM18.5625 20.625H3.4375C3.23953 20.6276 3.04347 20.586 2.8636 20.5033C2.68372 20.4205 2.52455 20.2987 2.39766 20.1468C2.11836 19.8129 2.00578 19.357 2.08914 18.8959C2.4518 16.8841 3.5836 15.1942 5.3625 14.0078C6.94289 12.9546 8.94481 12.375 11 12.375C13.0552 12.375 15.0571 12.9551 16.6375 14.0078C18.4164 15.1938 19.5482 16.8837 19.9109 18.8955C19.9942 19.3566 19.8816 19.8125 19.6023 20.1463C19.4755 20.2984 19.3163 20.4203 19.1365 20.5031C18.9566 20.5859 18.7605 20.6275 18.5625 20.625Z"
                                                 fill="#0C396E" />
                                         </svg>
-                                          <a href="{{ route('user.profile',$product->user->id) }}">
-                                            {{ $product->user->first_name }}  {{ $product->user->last_name }}
-                                          </a>
                                         </li>
-
-
 
 
                                 </ul>
@@ -78,18 +75,18 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
 
 
                 <div class="head">
-                    <h4 class="  my-4 mr-4 ">ذات صلة </h4>
+                    <h4 class="  my-4 mr-4 "> </h4>
                 </div>
                 <div class="row w-100">
 
-                    @foreach ($products as $product)
+                    @forelse ( $products as $product)
                     <div class="col col-lg-4 col-md-6 col-xs-12 col-sm-6 col-12">
                         <a href="{{ route('advertisement.show',$product->id) }}">
 
@@ -158,8 +155,17 @@
                              </div>
                          </a>
                      </div>
+             
+                    @empty
 
-                    @endforeach
+
+                    <h4 class="etxt-center">No Data Found</h4>
+
+                    @endforelse
+
+
+
+
 
 
                 </div>
@@ -171,5 +177,11 @@
         </div>
     </div>
 </section>
+
+
+@endsection
+
+
+@section('scripts')
 
 @endsection
